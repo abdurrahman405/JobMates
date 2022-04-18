@@ -121,7 +121,6 @@ body{
     font-size: 1.6rem;
     line-height: 3rem;
     font-weight: normal;
-    color: #1D2A80;
     overflow: hidden;
     margin: 0;
     font-weight: 500;
@@ -157,6 +156,7 @@ h1 {
 h2 {
     font-size: 4rem;
     line-height: 4.4rem;
+    color: var(--title-text-color);
     font-family: "samsung_sharp_bold", sans-serif;
 }
 @media only screen and (max-width: 1050px){
@@ -206,6 +206,13 @@ a.btn{
     font-weight: bold;
 }
 
+.title_row{
+    display: flex;
+}
+.title_row h2{
+    margin: 0 auto;
+}
+
 
 /* --------------------------   Slick Slider   -------------------------- */
 
@@ -291,7 +298,7 @@ a.btn{
     float: left;
 
     height: 100%;
-    min-height: 1px;
+    min-height: .1rem;
 }
 [dir='rtl'] .slick-slide
 {
@@ -323,7 +330,7 @@ a.btn{
 
     height: auto;
 
-    border: 1px solid transparent;
+    border: .1rem solid transparent;
 }
 .slick-arrow.slick-hidden {
     display: none;
@@ -371,11 +378,13 @@ a.btn{
 .slick-slider .slick-track,
 .slick-slider .slick-list
 {
+    display: flex;
     -webkit-transform: translate3d(0, 0, 0);
        -moz-transform: translate3d(0, 0, 0);
         -ms-transform: translate3d(0, 0, 0);
          -o-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
+
 }
 
 .slick-track
@@ -410,7 +419,7 @@ a.btn{
     float: left;
 
     height: 100%;
-    min-height: 1px;
+    min-height: .1rem;
 }
 [dir='rtl'] .slick-slide
 {
@@ -442,20 +451,301 @@ a.btn{
 
     height: auto;
 
-    border: 1px solid transparent;
+    border: .1rem solid transparent;
 }
 .slick-arrow.slick-hidden {
     display: none;
 }
 
-/* --------------------------   Slick Slider   -------------------------- */
+/* --------------------------   REVIEWS   -------------------------- */
 
-.tectimonial_title_row {
-    margin: 8.5rem auto 7.5rem;
+
+.reviews_container .slick-track{
+    flex-direction: column !important;
+    height: max-content !important;
+}
+.reviews_container{
+    width: 128rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+}
+.review_full_row{
+    background-color: #FFF;
+    box-shadow: 0px .854808rem 3.49047rem 1.78085rem rgba(240, 240, 240, 0.25);
+    border-radius: 3rem;
+    position: relative;
+    padding: 6.8rem 11rem 8.5rem;
+}
+.review-row-bg-shape{
+    position: absolute;
+    right: -7rem;
+    z-index: -1;
+    bottom: -7rem;
+}
+.review_title_row h2{
+    margin-bottom: 6rem;
+}
+
+.review_content_row{
+    display: flex;
+    padding-top: 4rem;
+}
+
+.recently_added_col,
+.latest_review_col{
+    width: calc(100% - 54.75rem);
+    border-top: .07rem solid #E2E2E2;
+    position: relative;
+    padding-top: 1.5rem;
+}
+.recently_added_col::before,
+.latest_review_col::before {
+    position: absolute;
+    top: 0;
+    height: 4rem;
+    font-size: 1.3rem;
+    letter-spacing: .016rem;
+    line-height: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    border-radius: .35617rem .35617rem 0rem .35617rem;
+    padding: 0 2.2rem;
+    font-family: 'samsung_sharp_bold', sans-serif;
+    font-weight: 700;
+    top: -4rem;
+    left: -.3rem;
+}
+.recently_added_col::before{
+    content: 'RECENTLY AdDeD';
+    background-color: var(--main-color);
+    color: #FFF;
+
+}
+.latest_review_col::before{
+    content: 'LATEST REVIEWS';
+    background-color: #F0F1F5;
+    color: var(--title-text-color);
+}
+
+.recently_added_col{
+    margin-right: 6.5rem;
+}
+
+.recently_added_col .single_content{
+    padding: 2.5rem 0;
+    display: flex !important;
+    border-bottom: .1rem solid #E2E2E2;
+    height: max-content;
+}
+.recently_added_col .icon-holder{
+    width: 6rem;
+    height: 6rem;
+    border-radius: .3rem;
+    border: .08rem solid #D2D7DE;
+    margin-right: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .8rem;
+}
+.recently_added_col .name_container {
+    width: 20rem;
+}
+.recently_added_col .star_container {
+    width: calc(100% - 23rem);
     display: flex;
 }
-.tectimonial_title_row h2{
-    margin: 0 auto;
+
+.recently_added_col .meta_content{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+.recently_added_col .meta_content .full_name{
+    font-size: 1.78rem;
+    font-weight: 600;
+}
+.recently_added_col .meta_content .location__in_meta{
+    display: flex;
+    color: var(--main-color);
+    font-size: 1.23rem;
+    line-height: 1.3rem;
+    font-weight: 500;
+}
+.recently_added_col .meta_content .location_icon{
+    margin-right: .5rem;
+}
+.recently_added_col .meta_content .state_name{
+    margin-right: .4rem;
+}
+.recently_added_col .all_stars{
+    margin-right: .9rem;
+}
+.recently_added_col .content{
+    font-size: 1.2rem;
+    line-height: 1.78rem;
+    color: var(--soft-text-color);
+    max-width: 40rem;
+}
+
+
+.reviews .prev-arrow,
+.reviews .next-arrow{
+    position: absolute;
+    width: 2.6rem;
+    color: #fff;
+    top: -3.5rem;
+    font-size: 2rem;
+    z-index: 1;
+    transition-duration: 300ms;
+    cursor: pointer;
+}
+.reviews span.next-arrow.slick-arrow,
+.reviews span.prev-arrow.slick-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    border: .08rem solid #e2e2e2;
+    border-radius: .4rem;
+
+}
+.reviews span.next-arrow.slick-arrow:hover,
+.reviews span.prev-arrow.slick-arrow:hover{
+    border-color: var(--main-color);
+}
+.reviews span.next-arrow.slick-arrow {
+    left: 94%;
+}
+.reviews span.prev-arrow.slick-arrow {
+    left: 86%;
+}
+.reviews .prev-arrow svg,
+.reviews .next-arrow svg{
+    fill: transparent;
+    stroke: #D2D7DE;
+    transition-duration: 300ms;
+}
+.reviews .prev-arrow:hover svg,
+.reviews .next-arrow:hover svg{
+    stroke: var(--main-color);
+    transition-duration: 300ms;
+}
+
+
+
+/* -------------------------------------------------- */
+
+.latest_review_col .single_content{
+    padding: 2.5rem 0;
+    display: flex !important;
+    border-bottom: .1rem solid #E2E2E2;
+    height: max-content;
+}
+.latest_review_col .icon-holder{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 3rem;
+    margin-right: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .8rem;
+}
+.latest_review_col .name_container {
+    width: 20rem;
+}
+.latest_review_col .star_container {
+    width: calc(100% - 23rem);
+    display: flex;
+}
+
+.latest_review_col .meta_content{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+.latest_review_col .meta_content .full_name{
+    font-size: 1.78rem;
+    font-weight: 600;
+}
+.latest_review_col .reviewd-company{
+    font-size: 1.2rem;
+}
+.latest_review_col .reviewd-company span{
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.latest_review_col .content{
+    font-size: 1.2rem;
+    line-height: 1.78rem;
+    color: var(--soft-text-color);
+    max-width: 40rem;
+}
+.latest_review_col .all_stars{
+    margin-right: .9rem;
+}
+
+.reviews .prev-arrow,
+.reviews .next-arrow{
+    position: absolute;
+    width: 2.6rem;
+    color: #fff;
+    top: -3.5rem;
+    font-size: 2rem;
+    z-index: 1;
+    transition-duration: 300ms;
+    cursor: pointer;
+}
+.reviews span.next-arrow.slick-arrow,
+.reviews span.prev-arrow.slick-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    border: .08rem solid #e2e2e2;
+    border-radius: .4rem;
+
+}
+.reviews span.next-arrow.slick-arrow:hover,
+.reviews span.prev-arrow.slick-arrow:hover{
+    border-color: var(--main-color);
+}
+.reviews span.next-arrow.slick-arrow {
+    left: 94%;
+}
+.reviews span.prev-arrow.slick-arrow {
+    left: 86%;
+}
+.reviews .prev-arrow svg,
+.reviews .next-arrow svg{
+    fill: transparent;
+    stroke: #D2D7DE;
+    transition-duration: 300ms;
+}
+.reviews .prev-arrow:hover svg,
+.reviews .next-arrow:hover svg{
+    stroke: var(--main-color);
+    transition-duration: 300ms;
+}
+
+/* --------------------------   TESTIMONIAL   -------------------------- */
+
+
+
+.tectimonial_title_row {
+    
+}
+.testimonial_title_row h2{
+    margin: 15.5rem auto 7.5rem;
 }
 
 .testimonial_full_container {
@@ -467,14 +757,14 @@ a.btn{
     position: relative;
 }
 
-.single_content {
+.testimonial .single_content {
     padding: 3.5rem 4rem 2.5rem;
-    max-width: 51.5rem;
+    max-width: 58rem;
     font-size: 1.25rem;
     line-height: 1.95rem;
     color: #748B91;
-    box-shadow: -7.15407px 7.15407px 21.4624px #EFF4FF;
-    margin: 1.5rem 0rem 2.3rem 0rem;
+    box-shadow: -.715407rem .715407rem 2.14624rem #EFF4FF;
+    margin: 1.5rem 0rem 2.5rem 0rem;
 }
 
 .testimonial .content {
@@ -482,26 +772,26 @@ a.btn{
     min-height: 15.5rem;
 }
 
-.star_container {
+.testimonial .star_container {
     padding-bottom: 2rem;
     margin-bottom: 2rem;
     border-bottom: .1rem solid #D2D2D2;
 }
 
-.profile_container {
+.testimonial .profile_container {
     width: 25rem;
     display: flex;
     align-items: center;
 }
 
-.profile_icon_holder {
+.testimonial .profile_icon_holder {
     width: 3.6rem;
     height: 3.6rem;
     margin-right: 1rem;
     border-radius: 50%;
 }
 
-.name_holder {
+.testimonial .name_holder {
     font-size: 1.4rem;
     font-weight: bold;
     color: #0A2847;
@@ -514,8 +804,8 @@ a.btn{
     color: #748B91;
 }
 
-.prev-arrow,
-.next-arrow{
+.testimonial .prev-arrow,
+.testimonial .next-arrow{
     position: absolute;
     width: 2.6rem;
     color: #fff;
@@ -525,21 +815,33 @@ a.btn{
     transition-duration: 300ms;
     cursor: pointer;
 }
-span.next-arrow.slick-arrow {
+.testimonial span.next-arrow.slick-arrow {
     left: 54%;
 }
-span.prev-arrow.slick-arrow {
+.testimonial span.prev-arrow.slick-arrow {
     left: 46%;
 }
-.prev-arrow svg,
-.next-arrow svg{
+.testimonial .prev-arrow svg,
+.testimonial .next-arrow svg{
     fill: #D2D7DE;
     stroke: #D2D7DE;
     transition-duration: 300ms;
 }
-.prev-arrow:hover svg,
-.next-arrow:hover svg{
+.testimonial .prev-arrow:hover svg,
+.testimonial .next-arrow:hover svg{
     fill: var(--main-color);
     stroke: var(--main-color);
     transition-duration: 300ms;
 }
+.testimonial .slick-track{
+    gap: 4rem !important;
+}
+
+
+.slick-track {
+    display: flex !important;
+  }
+  
+  .slick-slide {
+    height: auto;
+  }
