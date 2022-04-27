@@ -2267,6 +2267,9 @@ fieldset{
     a.footer-btn{
         display: none;
     }
+    a.footer-btn{
+        display: none;
+    }
     .add-listing-icon-footer {
         display: block;
     }
