@@ -1378,7 +1378,7 @@ svg.cta-weve-right {
 }
 .cta-img-container img.white-ellipse {
     right: 47rem;
-    bottom: 40rem;
+    bottom: 40.7rem;
     width: 5rem;
 }
 .cta-img-container .full-img{
@@ -2080,14 +2080,7 @@ fieldset{
     margin-bottom: 1rem;
     position: relative;
 }
-.footer .social-title::after{
-    position: absolute;
-    content: '';
-    width: 24rem;
-    border-bottom: .1rem solid #b8b8b840;
-    bottom: -0.2rem;
-    left: 0;
-}
+
 .footer .all-icons {
     display: flex;
 }
@@ -2237,6 +2230,14 @@ fieldset{
 
 @media only screen and (max-width: 500px) {
 
+    /* .footer .social-title::after{
+        position: absolute;
+        content: '';
+        width: 24rem;
+        border-bottom: .1rem solid #b8b8b840;
+        bottom: -0.2rem;
+        left: 0;
+    } */
     .footer .features{
         width: 100%;
         flex-direction: column;
